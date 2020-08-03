@@ -1,34 +1,5 @@
 import numpy as np
 from itertools import product
-import time
-
-game_easy = np.array([
-    [6, 0, 0, 5, 0, 2, 9, 0, 0],
-    [2, 0, 3, 0, 9, 8, 6, 0, 0],
-    [1, 8, 0, 0, 7, 0, 0, 3, 0],
-
-    [0, 1, 0, 3, 0, 0, 0, 8, 5],
-    [0, 9, 0, 0, 0, 0, 0, 7, 0],
-    [4, 2, 0, 0, 0, 5, 0, 9, 0],
-
-    [0, 4, 0, 0, 5, 0, 0, 6, 1],
-    [0, 0, 7, 6, 1, 0, 8, 0, 9],
-    [0, 0, 1, 8, 0, 3, 0, 0, 4]
-], dtype=np.uint8)
-
-game = np.array([
-    [6, 5, 0, 0, 0, 8, 0, 0, 0],
-    [0, 0, 3, 0, 0, 0, 6, 0, 0],
-    [9, 0, 2, 0, 7, 0, 0, 0, 8],
-
-    [0, 6, 9, 2, 0, 0, 0, 0, 0],
-    [1, 0, 0, 0, 8, 0, 0, 0, 9],
-    [0, 0, 0, 0, 0, 4, 5, 2, 0],
-
-    [8, 0, 0, 0, 5, 0, 1, 0, 2],
-    [0, 0, 4, 0, 0, 0, 9, 5, 6],
-    [0, 0, 0, 1, 0, 0, 0, 8, 3] 
-], dtype=np.uint8)
 
 def is_array_valid(ar):
     vals = ar[ar != 0]
@@ -61,8 +32,3 @@ def solve(grid):
 
     return grid_
 
-tic = time.time()
-print(solve(game_easy))                
-tac = time.time()
-
-print('Solution found in {} ms.'.format((tac-tic)*1e3))
