@@ -24,11 +24,7 @@ def solve(grid):
             if is_grid_valid(grid_):
                 full_grid = solve(grid_)
                 if full_grid is not None:
-                    # We found a solution, return it
                     return full_grid
-
-        # We couldn't find any valid number for this position 
         return None
-
     return grid_
 

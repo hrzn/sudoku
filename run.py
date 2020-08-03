@@ -31,7 +31,11 @@ game_hard = np.array([
 ], dtype=np.uint8)
 
 tic = time.time()
-print(solve(game_easy))                
+solution = solve(game_easy)
 tac = time.time()
 
-print('Solution found in {} ms.'.format((tac-tic)*1e3))
+if solution is None:
+    print('This grid has no solution.')
+else:
+    print(solution)
+print('Found in {} ms.'.format((tac-tic)*1e3))
